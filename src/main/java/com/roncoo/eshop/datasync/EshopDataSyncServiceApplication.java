@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.context.annotation.Bean;
 
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -17,7 +18,7 @@ public class EshopDataSyncServiceApplication {
 
 		SpringApplication.run(EshopDataSyncServiceApplication.class, args);
 	}
-
+	@Bean
 	public JedisPool jedisPool() {
 
 		JedisPoolConfig config = new JedisPoolConfig();
