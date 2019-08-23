@@ -13,6 +13,15 @@ public interface EshopProductService {
     @RequestMapping(value = "/brand/findById",method = RequestMethod.GET)
     String findBrandById(@RequestParam(value = "id") Long id);
     
+    
+    @RequestMapping(value = "/brand/findByIds",method = RequestMethod.GET)
+    String findBrandByIds(@RequestParam(value = "ids") String ids);
+    
+    
+    
+    
+    
+    
     @RequestMapping(value = "/category/findById",method = RequestMethod.GET)
     String findCategoryById(@RequestParam(value = "id") Long id);
     
